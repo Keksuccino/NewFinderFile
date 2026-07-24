@@ -14,12 +14,12 @@ An empty, extensionless file is created and selected. Existing names receive a n
 
 The command and filename automatically follow the macOS system language.
 
-## Languages
-
-English, German, Japanese, Korean, Spanish, Spanish (Mexico), Russian, Ukrainian, Portuguese (Brazil), Polish, and Dutch.
-
 ## Installation
 
 Place `NewFinderFile.app` in `/Applications`, then enable **NewFinderFile Finder Extension** under:
 
 **System Settings → General → Login Items & Extensions → Finder Extensions**
+
+## Languages
+
+English, German, Japanese, Korean, Spanish, Spanish (Mexico), Russian, Ukrainian, Portuguese (Brazil), Polish, and Dutch.
