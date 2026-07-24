@@ -20,6 +20,6 @@ Place `NewFinderFile.app` in `/Applications`, then enable **NewFinderFile Finder
 
 **System Settings → General → Login Items & Extensions → Finder Extensions**
 
-## Languages
+## Supported Languages
 
 English, German, Japanese, Korean, Spanish, Spanish (Mexico), Russian, Ukrainian, Portuguese (Brazil), Polish, and Dutch.
