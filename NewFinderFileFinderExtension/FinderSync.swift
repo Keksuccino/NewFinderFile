@@ -8,6 +8,7 @@ class FinderSync: FIFinderSync {
         category: "CreateFile"
     )
     private let controller = FIFinderSyncController.default()
+    private let workspaceNotificationCenter = NSWorkspace.shared.notificationCenter
     private var pendingDirectoryURL: URL?
     private let newFileMenuTitle = NSLocalizedString(
         "new_file",
@@ -20,9 +21,46 @@ class FinderSync: FIFinderSync {
     override init() {
         super.init()
 
-        // Monitoring the filesystem root makes the container-background menu
-        // available in ordinary Finder folders, mounted volumes, and the Desktop.
-        controller.directoryURLs = [URL(fileURLWithPath: "/", isDirectory: true)]
+        refreshMonitoredDirectories()
+
+        workspaceNotificationCenter.addObserver(
+            self,
+            selector: #selector(mountedVolumesDidChange(_:)),
+            name: NSWorkspace.didMountNotification,
+            object: nil
+        )
+        workspaceNotificationCenter.addObserver(
+            self,
+            selector: #selector(mountedVolumesDidChange(_:)),
+            name: NSWorkspace.didUnmountNotification,
+            object: nil
+        )
+    }
+
+    deinit {
+        workspaceNotificationCenter.removeObserver(self)
+    }
+
+    @objc private func mountedVolumesDidChange(_ notification: Notification) {
+        refreshMonitoredDirectories()
+    }
+
+    private func refreshMonitoredDirectories() {
+        var directoryURLs: Set<URL> = [
+            URL(fileURLWithPath: "/", isDirectory: true).standardizedFileURL,
+        ]
+
+        // Finder Sync treats every mounted volume as a separate monitoring root.
+        // Registering "/" alone does not cover external or network volumes.
+        if let mountedVolumeURLs = FileManager.default.mountedVolumeURLs(
+            includingResourceValuesForKeys: nil,
+            options: []
+        ) {
+            directoryURLs.formUnion(mountedVolumeURLs.map(\.standardizedFileURL))
+        }
+
+        controller.directoryURLs = directoryURLs
+        logger.notice("Monitoring \(directoryURLs.count, privacy: .public) Finder roots")
     }
 
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
