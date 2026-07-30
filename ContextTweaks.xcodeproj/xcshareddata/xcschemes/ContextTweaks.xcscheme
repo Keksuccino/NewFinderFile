@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE0000000000000000000001"
-               BuildableName = "NewFinderFile.app"
-               BlueprintName = "NewFinderFile"
-               ReferencedContainer = "container:NewFinderFile.xcodeproj">
+               BuildableName = "Context Tweaks.app"
+               BlueprintName = "Context Tweaks"
+               ReferencedContainer = "container:ContextTweaks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,9 +42,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE0000000000000000000001"
-            BuildableName = "NewFinderFile.app"
-            BlueprintName = "NewFinderFile"
-            ReferencedContainer = "container:NewFinderFile.xcodeproj">
+            BuildableName = "Context Tweaks.app"
+            BlueprintName = "Context Tweaks"
+            ReferencedContainer = "container:ContextTweaks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE0000000000000000000001"
-            BuildableName = "NewFinderFile.app"
-            BlueprintName = "NewFinderFile"
-            ReferencedContainer = "container:NewFinderFile.xcodeproj">
+            BuildableName = "Context Tweaks.app"
+            BlueprintName = "Context Tweaks"
+            ReferencedContainer = "container:ContextTweaks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

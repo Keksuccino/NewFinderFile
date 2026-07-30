@@ -3,10 +3,10 @@ import Darwin
 import OSLog
 
 private let logger = Logger(
-    subsystem: "com.timsc.NewFinderFile",
+    subsystem: "com.timsc.ContextTweaks",
     category: "CreateFile"
 )
-private let requestScheme = "newfinderfile"
+private let requestScheme = "contexttweaks"
 private let requestHost = "create"
 private let newFileBaseName = NSLocalizedString(
     "new_file",
@@ -49,7 +49,7 @@ private func showAlert(message: String, style: NSAlert.Style) {
 
     let alert = NSAlert()
     alert.alertStyle = style
-    alert.messageText = "NewFinderFile"
+    alert.messageText = "Context Tweaks"
     alert.informativeText = message
     alert.addButton(withTitle: "OK")
     alert.runModal()

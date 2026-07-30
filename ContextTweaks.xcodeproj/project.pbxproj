@@ -11,11 +11,11 @@
 		AA0000000000000000000002 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000004 /* FinderSync.swift */; };
 		AA0000000000000000000003 /* FinderSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000009 /* FinderSync.framework */; };
 		AA0000000000000000000004 /* FinderSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000009 /* FinderSync.framework */; };
-		AA0000000000000000000005 /* NewFinderFile Finder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000008 /* NewFinderFile Finder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA0000000000000000000005 /* Context Tweaks Finder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000008 /* Context Tweaks Finder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA0000000000000000000006 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AI0000000000000000000001 /* Localizable.strings */; };
 		AA0000000000000000000007 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AI0000000000000000000001 /* Localizable.strings */; };
-		AA0000000000000000000008 /* NewFinderFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* NewFinderFile.icns */; };
-		AA0000000000000000000009 /* NewFinderFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* NewFinderFile.icns */; };
+		AA0000000000000000000008 /* ContextTweaks.icns in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* ContextTweaks.icns */; };
+		AA0000000000000000000009 /* ContextTweaks.icns in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* ContextTweaks.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +24,7 @@
 			containerPortal = AF0000000000000000000001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AE0000000000000000000002;
-			remoteInfo = "NewFinderFile Finder Extension";
+			remoteInfo = "Context Tweaks Finder Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -35,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				AA0000000000000000000005 /* NewFinderFile Finder Extension.appex in Embed App Extensions */,
+				AA0000000000000000000005 /* Context Tweaks Finder Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,12 +45,12 @@
 /* Begin PBXFileReference section */
 		AB0000000000000000000001 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AB0000000000000000000002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0000000000000000000003 /* NewFinderFile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewFinderFile.entitlements; sourceTree = "<group>"; };
+		AB0000000000000000000003 /* ContextTweaks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContextTweaks.entitlements; sourceTree = "<group>"; };
 		AB0000000000000000000004 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		AB0000000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0000000000000000000006 /* NewFinderFileFinderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewFinderFileFinderExtension.entitlements; sourceTree = "<group>"; };
-		AB0000000000000000000007 /* NewFinderFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewFinderFile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB0000000000000000000008 /* NewFinderFile Finder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NewFinderFile Finder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000006 /* ContextTweaksFinderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContextTweaksFinderExtension.entitlements; sourceTree = "<group>"; };
+		AB0000000000000000000007 /* Context Tweaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Context Tweaks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000008 /* Context Tweaks Finder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Context Tweaks Finder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0000000000000000000009 /* FinderSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FinderSync.framework; path = System/Library/Frameworks/FinderSync.framework; sourceTree = SDKROOT; };
 		AB0000000000000000000010 /* en_US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_US; path = Localizations/en_US.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB0000000000000000000011 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizations/de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		AB0000000000000000000018 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt_BR; path = Localizations/pt_BR.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB0000000000000000000019 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Localizations/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB0000000000000000000020 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localizations/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AB0000000000000000000021 /* NewFinderFile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = NewFinderFile.icns; sourceTree = "<group>"; };
-		AB0000000000000000000022 /* NewFinderFileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFinderFileIcon.png; sourceTree = "<group>"; };
-		AB0000000000000000000023 /* NewFinderFileIconSource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFinderFileIconSource.png; sourceTree = "<group>"; };
+		AB0000000000000000000021 /* ContextTweaks.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ContextTweaks.icns; sourceTree = "<group>"; };
+		AB0000000000000000000022 /* ContextTweaksIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContextTweaksIcon.png; sourceTree = "<group>"; };
+		AB0000000000000000000023 /* ContextTweaksIconSource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContextTweaksIconSource.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,8 @@
 		AD0000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				AD0000000000000000000002 /* NewFinderFile */,
-				AD0000000000000000000003 /* NewFinderFileFinderExtension */,
+				AD0000000000000000000002 /* ContextTweaks */,
+				AD0000000000000000000003 /* ContextTweaksFinderExtension */,
 				AI0000000000000000000001 /* Localizable.strings */,
 				AJ0000000000000000000001 /* Assets */,
 				AD0000000000000000000004 /* Frameworks */,
@@ -100,24 +100,24 @@
 			);
 			sourceTree = "<group>";
 		};
-		AD0000000000000000000002 /* NewFinderFile */ = {
+		AD0000000000000000000002 /* ContextTweaks */ = {
 			isa = PBXGroup;
 			children = (
 				AB0000000000000000000001 /* main.swift */,
 				AB0000000000000000000002 /* Info.plist */,
-				AB0000000000000000000003 /* NewFinderFile.entitlements */,
+				AB0000000000000000000003 /* ContextTweaks.entitlements */,
 			);
-			path = NewFinderFile;
+			path = ContextTweaks;
 			sourceTree = "<group>";
 		};
-		AD0000000000000000000003 /* NewFinderFileFinderExtension */ = {
+		AD0000000000000000000003 /* ContextTweaksFinderExtension */ = {
 			isa = PBXGroup;
 			children = (
 				AB0000000000000000000004 /* FinderSync.swift */,
 				AB0000000000000000000005 /* Info.plist */,
-				AB0000000000000000000006 /* NewFinderFileFinderExtension.entitlements */,
+				AB0000000000000000000006 /* ContextTweaksFinderExtension.entitlements */,
 			);
-			path = NewFinderFileFinderExtension;
+			path = ContextTweaksFinderExtension;
 			sourceTree = "<group>";
 		};
 		AD0000000000000000000004 /* Frameworks */ = {
@@ -131,8 +131,8 @@
 		AD0000000000000000000005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB0000000000000000000007 /* NewFinderFile.app */,
-				AB0000000000000000000008 /* NewFinderFile Finder Extension.appex */,
+				AB0000000000000000000007 /* Context Tweaks.app */,
+				AB0000000000000000000008 /* Context Tweaks Finder Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 		AJ0000000000000000000001 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				AB0000000000000000000021 /* NewFinderFile.icns */,
-				AB0000000000000000000022 /* NewFinderFileIcon.png */,
-				AB0000000000000000000023 /* NewFinderFileIconSource.png */,
+				AB0000000000000000000021 /* ContextTweaks.icns */,
+				AB0000000000000000000022 /* ContextTweaksIcon.png */,
+				AB0000000000000000000023 /* ContextTweaksIconSource.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE0000000000000000000001 /* NewFinderFile */ = {
+		AE0000000000000000000001 /* Context Tweaks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AH0000000000000000000002 /* Build configuration list for PBXNativeTarget "NewFinderFile" */;
+			buildConfigurationList = AH0000000000000000000002 /* Build configuration list for PBXNativeTarget "Context Tweaks" */;
 			buildPhases = (
 				AC0000000000000000000001 /* Sources */,
 				AC0000000000000000000002 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				AA0000000000000000000011 /* PBXTargetDependency */,
 			);
-			name = NewFinderFile;
-			productName = NewFinderFile;
-			productReference = AB0000000000000000000007 /* NewFinderFile.app */;
+			name = "Context Tweaks";
+			productName = "Context Tweaks";
+			productReference = AB0000000000000000000007 /* Context Tweaks.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE0000000000000000000002 /* NewFinderFile Finder Extension */ = {
+		AE0000000000000000000002 /* Context Tweaks Finder Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AH0000000000000000000003 /* Build configuration list for PBXNativeTarget "NewFinderFile Finder Extension" */;
+			buildConfigurationList = AH0000000000000000000003 /* Build configuration list for PBXNativeTarget "Context Tweaks Finder Extension" */;
 			buildPhases = (
 				AC0000000000000000000006 /* Sources */,
 				AC0000000000000000000007 /* Frameworks */,
@@ -181,9 +181,9 @@
 			);
 			dependencies = (
 			);
-			name = "NewFinderFile Finder Extension";
-			productName = "NewFinderFile Finder Extension";
-			productReference = AB0000000000000000000008 /* NewFinderFile Finder Extension.appex */;
+			name = "Context Tweaks Finder Extension";
+			productName = "Context Tweaks Finder Extension";
+			productReference = AB0000000000000000000008 /* Context Tweaks Finder Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AH0000000000000000000001 /* Build configuration list for PBXProject "NewFinderFile" */;
+			buildConfigurationList = AH0000000000000000000001 /* Build configuration list for PBXProject "ContextTweaks" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en_US;
 			hasScannedForEncodings = 0;
@@ -227,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE0000000000000000000001 /* NewFinderFile */,
-				AE0000000000000000000002 /* NewFinderFile Finder Extension */,
+				AE0000000000000000000001 /* Context Tweaks */,
+				AE0000000000000000000002 /* Context Tweaks Finder Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000000000000000000006 /* Localizable.strings in Resources */,
-				AA0000000000000000000008 /* NewFinderFile.icns in Resources */,
+				AA0000000000000000000008 /* ContextTweaks.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000000000000000000007 /* Localizable.strings in Resources */,
-				AA0000000000000000000009 /* NewFinderFile.icns in Resources */,
+				AA0000000000000000000009 /* ContextTweaks.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 /* Begin PBXTargetDependency section */
 		AA0000000000000000000011 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE0000000000000000000002 /* NewFinderFile Finder Extension */;
+			target = AE0000000000000000000002 /* Context Tweaks Finder Extension */;
 			targetProxy = AA0000000000000000000010 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -328,17 +328,17 @@
 		AG0000000000000000000003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = NewFinderFile/NewFinderFile.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextTweaks/ContextTweaks.entitlements;
 				CODE_SIGNING_ALLOWED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
-				EXECUTABLE_NAME = NewFinderFile;
+				EXECUTABLE_NAME = ContextTweaks;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = NewFinderFile/Info.plist;
+				INFOPLIST_FILE = ContextTweaks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.NewFinderFile;
-				PRODUCT_NAME = NewFinderFile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.ContextTweaks;
+				PRODUCT_NAME = "Context Tweaks";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -346,17 +346,17 @@
 		AG0000000000000000000004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = NewFinderFile/NewFinderFile.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextTweaks/ContextTweaks.entitlements;
 				CODE_SIGNING_ALLOWED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
-				EXECUTABLE_NAME = NewFinderFile;
+				EXECUTABLE_NAME = ContextTweaks;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = NewFinderFile/Info.plist;
+				INFOPLIST_FILE = ContextTweaks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.NewFinderFile;
-				PRODUCT_NAME = NewFinderFile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.ContextTweaks;
+				PRODUCT_NAME = "Context Tweaks";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -365,19 +365,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_ENTITLEMENTS = NewFinderFileFinderExtension/NewFinderFileFinderExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextTweaksFinderExtension/ContextTweaksFinderExtension.entitlements;
 				CODE_SIGNING_ALLOWED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
-				EXECUTABLE_NAME = NewFinderFileFinderExtension;
+				EXECUTABLE_NAME = ContextTweaksFinderExtension;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = NewFinderFileFinderExtension/Info.plist;
+				INFOPLIST_FILE = ContextTweaksFinderExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.NewFinderFile.FinderExtension;
-				PRODUCT_MODULE_NAME = NewFinderFileFinderExtension;
-				PRODUCT_NAME = "NewFinderFile Finder Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.ContextTweaks.FinderExtension;
+				PRODUCT_MODULE_NAME = ContextTweaksFinderExtension;
+				PRODUCT_NAME = "Context Tweaks Finder Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -387,19 +387,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_ENTITLEMENTS = NewFinderFileFinderExtension/NewFinderFileFinderExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextTweaksFinderExtension/ContextTweaksFinderExtension.entitlements;
 				CODE_SIGNING_ALLOWED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
-				EXECUTABLE_NAME = NewFinderFileFinderExtension;
+				EXECUTABLE_NAME = ContextTweaksFinderExtension;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = NewFinderFileFinderExtension/Info.plist;
+				INFOPLIST_FILE = ContextTweaksFinderExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.NewFinderFile.FinderExtension;
-				PRODUCT_MODULE_NAME = NewFinderFileFinderExtension;
-				PRODUCT_NAME = "NewFinderFile Finder Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.timsc.ContextTweaks.FinderExtension;
+				PRODUCT_MODULE_NAME = ContextTweaksFinderExtension;
+				PRODUCT_NAME = "Context Tweaks Finder Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -408,7 +408,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AH0000000000000000000001 /* Build configuration list for PBXProject "NewFinderFile" */ = {
+		AH0000000000000000000001 /* Build configuration list for PBXProject "ContextTweaks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AG0000000000000000000001 /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AH0000000000000000000002 /* Build configuration list for PBXNativeTarget "NewFinderFile" */ = {
+		AH0000000000000000000002 /* Build configuration list for PBXNativeTarget "Context Tweaks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AG0000000000000000000003 /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AH0000000000000000000003 /* Build configuration list for PBXNativeTarget "NewFinderFile Finder Extension" */ = {
+		AH0000000000000000000003 /* Build configuration list for PBXNativeTarget "Context Tweaks Finder Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AG0000000000000000000005 /* Debug */,

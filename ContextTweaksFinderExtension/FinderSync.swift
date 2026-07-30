@@ -4,7 +4,7 @@ import OSLog
 
 class FinderSync: FIFinderSync {
     private let logger = Logger(
-        subsystem: "com.timsc.NewFinderFile.FinderExtension",
+        subsystem: "com.timsc.ContextTweaks.FinderExtension",
         category: "CreateFile"
     )
     private let controller = FIFinderSyncController.default()
@@ -90,7 +90,7 @@ class FinderSync: FIFinderSync {
 
     @objc @IBAction func createNewFile(_ sender: AnyObject?) {
         guard let directoryURL = controller.targetedURL() ?? pendingDirectoryURL else {
-            logger.error("Finder invoked NewFinderFile without a target directory")
+            logger.error("Finder invoked Context Tweaks without a target directory")
             NSSound.beep()
             return
         }
@@ -106,17 +106,17 @@ class FinderSync: FIFinderSync {
         let hostApplicationURL = Bundle.main.bundleURL
             .deletingLastPathComponent() // PlugIns
             .deletingLastPathComponent() // Contents
-            .deletingLastPathComponent() // NewFinderFile.app
+            .deletingLastPathComponent() // Context Tweaks.app
 
         guard hostApplicationURL.pathExtension == "app" else {
-            logger.error("Could not locate the containing NewFinderFile app")
+            logger.error("Could not locate the containing Context Tweaks app")
             NSSound.beep()
             return
         }
 
         let requestID = UUID().uuidString
         var requestComponents = URLComponents()
-        requestComponents.scheme = "newfinderfile"
+        requestComponents.scheme = "contexttweaks"
         requestComponents.host = "create"
         requestComponents.queryItems = [
             URLQueryItem(name: "directory", value: directoryURL.absoluteString),

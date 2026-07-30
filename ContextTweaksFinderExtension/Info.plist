@@ -5,9 +5,9 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en_US</string>
     <key>CFBundleDisplayName</key>
-    <string>NewFinderFile</string>
+    <string>Context Tweaks Finder Extension</string>
     <key>CFBundleIconFile</key>
-    <string>NewFinderFile.icns</string>
+    <string>ContextTweaks.icns</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -17,30 +17,24 @@
     <key>CFBundleName</key>
     <string>$(PRODUCT_NAME)</string>
     <key>CFBundlePackageType</key>
-    <string>APPL</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Viewer</string>
-            <key>CFBundleURLName</key>
-            <string>com.timsc.NewFinderFile.CreateRequest</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>newfinderfile</string>
-            </array>
-        </dict>
-    </array>
+    <string>XPC!</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.1</string>
+    <string>1.1.0</string>
     <key>CFBundleVersion</key>
-    <string>7</string>
-    <key>LSUIElement</key>
-    <true/>
+    <string>8</string>
     <key>LSMinimumSystemVersion</key>
     <string>13.0</string>
-    <key>NSHighResolutionCapable</key>
+    <key>LSUIElement</key>
     <true/>
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionAttributes</key>
+        <dict/>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.FinderSync</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).FinderSync</string>
+    </dict>
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
 </dict>
