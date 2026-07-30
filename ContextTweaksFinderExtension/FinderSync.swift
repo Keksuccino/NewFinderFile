@@ -5,17 +5,25 @@ import OSLog
 class FinderSync: FIFinderSync {
     private let logger = Logger(
         subsystem: "com.timsc.ContextTweaks.FinderExtension",
-        category: "CreateFile"
+        category: "FinderActions"
     )
     private let controller = FIFinderSyncController.default()
     private let workspaceNotificationCenter = NSWorkspace.shared.notificationCenter
     private var pendingDirectoryURL: URL?
+    private var pendingCopyURLs: [URL] = []
     private let newFileMenuTitle = NSLocalizedString(
         "new_file",
         tableName: nil,
         bundle: .main,
         value: "New File",
         comment: "Finder context-menu command that creates an empty file"
+    )
+    private let copyPathMenuTitle = NSLocalizedString(
+        "copy_path_to_clipboard",
+        tableName: nil,
+        bundle: .main,
+        value: "Copy Path to Clipboard",
+        comment: "Finder context-menu command that copies absolute paths"
     )
 
     override init() {
@@ -66,26 +74,55 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         let menu = NSMenu(title: "")
 
-        guard menuKind == .contextualMenuForContainer,
-              let directoryURL = controller.targetedURL(),
-              directoryURL.isFileURL else {
-            return menu
+        switch menuKind {
+        case .contextualMenuForContainer:
+            guard let directoryURL = controller.targetedURL(), directoryURL.isFileURL else {
+                return menu
+            }
+
+            pendingDirectoryURL = directoryURL
+
+            var isDirectory: ObjCBool = false
+            guard FileManager.default.fileExists(atPath: directoryURL.path, isDirectory: &isDirectory), isDirectory.boolValue else {
+                return menu
+            }
+
+            menu.addItem(withTitle: newFileMenuTitle, action: #selector(createNewFile(_:)), keyEquivalent: "")
+            addCopyPathItem(to: menu, urls: [directoryURL])
+        case .contextualMenuForItems:
+            guard let selectedItemURLs = controller.selectedItemURLs()?.filter(\.isFileURL), !selectedItemURLs.isEmpty else {
+                return menu
+            }
+
+            addCopyPathItem(to: menu, urls: selectedItemURLs)
+        default:
+            break
         }
 
-        pendingDirectoryURL = directoryURL
-
-        var isDirectory: ObjCBool = false
-        guard FileManager.default.fileExists(atPath: directoryURL.path, isDirectory: &isDirectory),
-              isDirectory.boolValue else {
-            return menu
-        }
-
-        menu.addItem(
-            withTitle: newFileMenuTitle,
-            action: #selector(createNewFile(_:)),
-            keyEquivalent: ""
-        )
         return menu
+    }
+
+    private func addCopyPathItem(to menu: NSMenu, urls: [URL]) {
+        pendingCopyURLs = urls
+        let item = menu.addItem(withTitle: copyPathMenuTitle, action: #selector(copyPathToClipboard(_:)), keyEquivalent: "")
+
+        // Keep the exact menu targets on the item. Finder selection can change
+        // while a contextual menu is open, so resolving them again on click can
+        // copy a path that the user did not invoke the command for.
+        item.representedObject = urls
+    }
+
+    @objc @IBAction func copyPathToClipboard(_ sender: AnyObject?) {
+        let representedURLs = (sender as? NSMenuItem)?.representedObject as? [URL]
+        let targetURLs = representedURLs.flatMap { $0.isEmpty ? nil : $0 } ?? pendingCopyURLs
+
+        guard PathClipboard.copy(urls: targetURLs) else {
+            logger.error("Could not copy Finder paths to the clipboard")
+            NSSound.beep()
+            return
+        }
+
+        logger.notice("Copied \(targetURLs.count, privacy: .public) Finder path(s) to the clipboard")
     }
 
     @objc @IBAction func createNewFile(_ sender: AnyObject?) {
@@ -148,5 +185,17 @@ class FinderSync: FIFinderSync {
                 NSSound.beep()
             }
         }
+    }
+}
+
+enum PathClipboard {
+    static func copy(urls: [URL], to pasteboard: NSPasteboard = .general) -> Bool {
+        let paths = urls.compactMap { $0.isFileURL ? $0.path : nil }
+        guard !paths.isEmpty else {
+            return false
+        }
+
+        pasteboard.clearContents()
+        return pasteboard.setString(paths.joined(separator: "\n"), forType: .string)
     }
 }
