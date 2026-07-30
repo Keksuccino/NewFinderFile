@@ -1,6 +1,6 @@
 <p align="center"> <img width="100" alt="icon" src="https://github.com/user-attachments/assets/2280bdcb-48e5-4a7a-91fc-04b37280ffe4" /> </p>
 
-<p align="center"> A macOS Finder extension that adds a <b>New File</b> command to folder context menus. </p>
+<p align="center"> A macOS Finder extension that adds <b>New File</b> and <b>Copy Path to Clipboard</b> entries to folder context menus. </p>
 
 <br>
 
